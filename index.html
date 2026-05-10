@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Web3 App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Token Web3 Manager</h1>
+        
+        <div class="card">
+            <h2>🔌 Conectar Wallet</h2>
+            <button id="connectBtn" class="btn">Conectar MetaMask</button>
+            <p id="account" class="info"></p>
+        </div>
+
+        <div class="card" id="tokenSection" style="display: none;">
+            <h2>📊 Información del Token</h2>
+            <p><strong>Nombre:</strong> <span id="tokenName">-</span></p>
+            <p><strong>Símbolo:</strong> <span id="tokenSymbol">-</span></p>
+            <p><strong>Supply Total:</strong> <span id="totalSupply">-</span></p>
+            <p><strong>Mi Balance:</strong> <span id="balance">-</span></p>
+        </div>
+
+        <div class="card" id="transferSection" style="display: none;">
+            <h2>💸 Transferir Tokens</h2>
+            <input type="text" id="toAddress" placeholder="Dirección destino" class="input">
+            <input type="number" id="amount" placeholder="Cantidad" class="input">
+            <button id="transferBtn" class="btn">Enviar Tokens</button>
+            <p id="transferStatus" class="status"></p>
+        </div>
+
+        <div class="card">
+            <h2>🎁 Faucet (Testnet)</h2>
+            <button id="faucetBtn" class="btn">Recibir Tokens de Prueba</button>
+            <p id="faucetStatus" class="status"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
